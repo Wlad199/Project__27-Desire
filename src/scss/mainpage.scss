@@ -7,6 +7,7 @@
 .main-screen {
 	//background: url('@img/main-screen/bg.jpg') 0 0/cover no-repeat;
 	position: relative;
+	@include adaptiveValue("margin-top", 120, 60, 1100, 767, 1);
 
 		&__body {
 			//display: flex;
@@ -125,3 +126,25 @@
 .slick-dots li.slick-active button{
 	background-color: #FFEF35;
 }
+
+// main-gallery ====================================================================================================//
+
+.main-gallery {
+	@include adaptiveValue("padding-top", 150, 80);
+
+	&__content {
+		text-align: center;
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
+
+	&__text {
+		@include adaptiveValue("padding-bottom", 60, 40);
+	}
+
+	&__gallery {
+	}
+}
+
