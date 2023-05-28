@@ -5,6 +5,10 @@ import { flsModules } from "./modules.js";
 
 
 // Функционал слайдера-слик (MW 3.2)
-//$(document).ready(function () {
-//	$('.comment__body').slick();
-//})
+$(document).ready(function () {
+	$('.main-screen__box').slick({
+		dots: true, // точки
+		arrows: false,
+		autoplay: true,
+	});
+})
