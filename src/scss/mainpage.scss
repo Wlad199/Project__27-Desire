@@ -148,3 +148,143 @@
 	}
 }
 
+// aesthetic ====================================================================================================//
+
+.aesthetic {
+	@include adaptiveValue("margin-top", 105, 60);
+	@include adaptiveValue("padding-top", 170, 80);
+	@include adaptiveValue("padding-bottom", 160, 70);
+	position: relative;
+
+	&__image-ibg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: .3;
+	}
+
+	&__content {
+		max-width: 500px;
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 60, 35);
+		@include adaptiveValue("margin-bottom", 45, 25);
+	}
+
+	&__text {
+	}
+}
+
+// how-it-works ====================================================================================================//
+
+.how-it-works {
+	@include adaptiveValue("padding-top", 80, 50);
+	@include adaptiveValue("padding-bottom", 110, 60);
+
+	&__container {
+	}
+
+	&__title {
+		text-align: center;
+		@include adaptiveValue("padding-bottom", 40, 25);
+	}
+
+	&__content {
+	}
+
+	&__box {
+		display: flex;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+		@media (min-width: 767px) {
+			margin-bottom: 10px;
+			gap: 20px;
+			position: relative;
+			::after {
+				content: '';
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: rgba(#363838, .7);
+			}
+			::before {
+				content: '';
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				width: 2px;
+				height: 20px;
+				background-color: rgba(#363838, .7);
+			}
+		}
+	}
+
+	&__body {
+		@media (min-width: 767px) {
+			max-width: 250px;
+		}
+	}
+
+	&__item {
+	}
+}
+
+.item-how-it-works {
+	flex: 0 1 50%;
+	@media (max-width: 767px) {
+		flex: 0 1 100%;
+		@include adaptiveValue("margin-bottom", 50, 40, 767, 320, 1);
+		position: relative;
+		::after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			width: 80%;
+			transform: translate(10%);
+			height: 1px;
+			background-color: rgba(#363838, .7);
+		}
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		padding-bottom: 14px;
+	}
+
+	&__image {
+		padding-right: 10px;
+	}
+
+	&__sub-title {
+	}
+
+	&__text {
+	}
+
+	&_b {
+		@media (min-width: 767px) {
+			margin-left: 50%;
+			padding-top: 40px;
+			transform: translateX(-50%);
+			position: relative;
+			::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2px;
+				height: 20px;
+				background-color: rgba(#363838, .7);
+			}
+		}
+	}
+}
+
