@@ -9,6 +9,6 @@ $(document).ready(function () {
 	$('.main-screen__box').slick({
 		dots: true, // точки
 		arrows: false,
-		//autoplay: true,
+		autoplay: true,
 	});
 })
