@@ -89,6 +89,33 @@
 	}
 }
 
+// crumbs-block ====================================================================================================//
+
+.crumbs-block {
+	@include adaptiveValue("margin-top",120, 60, 1100, 767, 1);
+	background-color: #dfdfdf;
+
+		&__container {
+		}
+
+		&__box {
+			display: flex;
+			@include adaptiveValue("padding-top", 20, 12);
+			@include adaptiveValue("padding-bottom", 20, 12);
+			font-size: 14px;
+			color: #5A5A5A;
+
+			a{
+				margin-right: 10px;
+				transition: all 0.3s ease 0s;
+				&:hover {
+					color: #0e7a73;
+				}
+			}
+		}
+}
+
+
 // gallery ====================================================================================================//
 
 

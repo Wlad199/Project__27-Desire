@@ -1,5 +1,5 @@
 .page {
-	padding-bottom: 200px;
+	//padding-bottom: 200px;
 }
 
 // main-screen  ====================================================================================================//
@@ -676,4 +676,50 @@
 		width: 100%;
 		background-color: #fff;
 	}
+}
+
+// brands ====================================================================================================//
+
+.brands {
+	padding-top: 30px;
+	padding-bottom: 40px;
+
+	&__container {
+	}
+
+	&__list {
+		display: flex;
+		padding: 0px 15px;
+		gap: 30px;
+		justify-content: center;
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		@media (max-width: 992px) {
+			flex: 0 1 calc(33.333% - 20px);
+		}
+		img {
+			max-width: 100%;
+		}
+		&_m {
+			@media (max-width: 992px) {
+				//display: none;
+			}
+		}
+	}
+}
+
+// about-gallery ====================================================================================================//
+
+.about-gallery__gallery {
+	@include adaptiveValue("padding-bottom", 70, 40);
+}
+
+// block-gallery ====================================================================================================//
+
+.block-gallery {
+	@include adaptiveValue("padding-top", 85, 50);
 }
