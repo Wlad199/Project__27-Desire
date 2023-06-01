@@ -722,4 +722,5 @@
 
 .block-gallery {
 	@include adaptiveValue("padding-top", 85, 50);
+	@include adaptiveValue("padding-bottom", 100, 50);
 }
