@@ -206,3 +206,40 @@
 		text-align: center;
 	}
 }
+
+//  ====================================================================================================//
+
+.pagination-box-block {
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 18px;
+	}
+
+	&__item {
+		font-weight: 600;
+		color: #707070;
+		transition: all 0.3s ease 0s;
+		svg {
+			margin-top: 2px;
+			height: 14px;
+			width: 15px;
+		}
+		path {
+			transition: all 0.3s ease 0s;
+		}
+		&:hover{
+			color: #0e7a73;
+			path {
+					fill: #0e7a73;
+		}
+		}
+		&._active {
+			color: #0e7a73;
+			opacity: .5;
+			cursor: default;
+		}
+	}
+}

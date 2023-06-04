@@ -929,6 +929,9 @@
 
 	&__comments {
 	}
+
+	&__pagination {
+	}
 }
 
 .paper-box-block {
@@ -1226,8 +1229,8 @@
 	&__check-box {
 		font-size: 14px;
 		color: #a1a1a1;
-		width: 1px;
-		height: 1px;
+		width: 0px;
+		height: 0px;
 		overflow: hidden;
 		clip: rect(0 0 0 0);
 		display: block;
