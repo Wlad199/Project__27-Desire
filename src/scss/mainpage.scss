@@ -732,15 +732,16 @@
 // block ====================================================================================================//
 
 .block {
-
+	
 	&__container {
 		@include adaptiveValue("padding-top", 60, 40);
 		display: flex;
 		gap: 30px;
 	}
-
+	
 	&__box {
 		flex: 0 1 calc(730 / 1100 * 100%);
+		@include adaptiveValue("padding-bottom", 100, 70);
 	}
 
 	&__aside {
@@ -924,6 +925,9 @@
 	}
 
 	&__quote {
+	}
+
+	&__comments {
 	}
 }
 
@@ -1113,5 +1117,164 @@
 	}
 }
 
-.paper-box-block__slider-comment {
+//  ====================================================================================================//
+
+.comments-box-block {
+	padding-top: 35px;
+	@include adaptiveValue("padding-bottom", 50, 40);
+
+	&__title {
+		@include adaptiveValue("font-size", 20, 18);
+		@include adaptiveValue("padding-bottom", 25, 20);
+	}
+
+	&__comment {
+		display: flex;
+	}
+
+	&__image {
+		padding-right: 20px;
+	}
+
+	&__content {
+	}
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 30px;
+	}
+
+	&__person {
+	}
+
+	&__name {
+		display: block;
+		padding-bottom: 5px;
+	}
+
+	&__data {
+	}
+
+	&__reply {
+	}
+
+	&__text {
+	}
+}
+
+// post-box-block ====================================================================================================//
+
+.post-box-block {
+
+	&__title {
+		@include adaptiveValue("font-size", 20, 18);
+		@include adaptiveValue("padding-bottom", 25, 20);
+	}
+
+	&__form {
+	}
+
+	&__text-area {
+		border: 1px solid #DFDFDF;
+		border-radius: 24px;
+		resize: none;
+		min-height: 125px;
+		width: 100%;
+		padding: 15px;
+		margin-bottom: 15px;
+		&::placeholder {
+			color: #a1a1a1;
+		}
+	}
+
+	&__row {
+		display: flex;
+		gap: 10px;
+		padding-bottom: 25px;
+	}
+
+	&__input-text {
+		border: 1px solid #DFDFDF;
+		border-radius: 20px;
+		flex: 0 1 50%;
+		height: 40px;
+		padding: 0px 15px;
+		&::placeholder {
+			color: #a1a1a1;
+		}
+	}
+
+	&__input-email {
+		border: 1px solid #DFDFDF;
+		border-radius: 20px;
+		flex: 0 1 50%;
+		height: 40px;
+		padding: 0px 15px;
+		&::placeholder {
+			color: #a1a1a1;
+		}
+	}
+
+ &__check {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	color: #a1a1a1;
+ }
+
+	&__check-box {
+		font-size: 14px;
+		color: #a1a1a1;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		display: block;
+	}
+
+	&__submit {
+		font-weight: 600;
+		text-align: center;
+		color: #fffff0;
+		background: #363838;
+		border-radius: 21px;
+		padding: 9px 12px;
+		min-width: 140px;
+		transition: all 0.2s ease 0s;
+		&:hover {
+			background-color: $green;
+			outline: 1px solid #000;
+		}
+	}
+}
+
+.check-style {
+	&::after{
+		content: '';
+	position: absolute;
+	//top: 0;
+	//left: -27px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #a1a1a1;}
+
+}
+.post-box-block__check-box:checked + .check-style{
+	&::after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0px;
+		width: 20px;
+		height: 20px;
+		border: 5px solid #0e7a73;
+	}
+}
+
+.post-box-block__check-text {
+	padding-left: 30px;
+	padding-top: 2px;
+	display: block;
+	margin-bottom: 30px;
 }
