@@ -12,3 +12,11 @@ $(document).ready(function () {
 		autoplay: true,
 	});
 })
+
+$(document).ready(function () {
+	$('.comment-slider').slick({
+		dots: false, // точки
+		arrows: true,
+		slidesToShow: 1,
+	});
+})
