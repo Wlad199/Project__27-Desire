@@ -20,3 +20,15 @@ $(document).ready(function () {
 		slidesToShow: 1,
 	});
 })
+
+
+$(document).ready(function () {
+	$('.gallery-contact__box').slick({
+		dots: true, // точки
+		arrows: false,
+		slidesToShow: 6,
+		autoplay: true, // автовоспроизведение (false)
+		autoplaySpeed: 3000, // скорость (3000)
+		variableWidth: true,
+	});
+})
