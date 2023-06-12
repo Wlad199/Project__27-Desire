@@ -1,5 +1,14 @@
 .page {
 	//padding-bottom: 200px;
+	position: relative;
+}
+.open-menu {
+	position: fixed;
+	top: 100px;
+	right: 15px;
+	z-index: 50;
+	height: 50px;
+	width: 50px;
 }
 
 // main-screen  ====================================================================================================//
@@ -741,6 +750,7 @@
 		@include adaptiveValue("padding-top", 60, 40);
 		display: flex;
 		gap: 30px;
+		position: relative;
 	}
 	
 	&__box {
@@ -760,9 +770,18 @@
 
 
 .aside {
-	display: none;
-	@media (min-width: 992px) {
-		display: block;
+	@media (max-width: 992px) {
+		position: absolute;
+		right: -100%;
+		width: 100%;
+		background-color: #fff;
+		max-width: 400px;
+		padding-left: 20px;
+		z-index: 2;
+		transition: all 0.3s ease 0s;
+		&._active {
+			right: 0;
+		}
 	}
 	max-width: 350px;
 
@@ -814,6 +833,7 @@
 	&__social {
 	}
 }
+
 .categories-aside {
 	@include adaptiveValue("padding-bottom", 50, 30);
 
