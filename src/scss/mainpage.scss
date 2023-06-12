@@ -996,7 +996,19 @@
 
 	&__pagination {
 	}
+
+	&_2 {
+		display: none;
+	}
 }
+
+.block__container._second-page .box-block_2 {
+	display: block;
+}
+.block__container._second-page .box-block_1 {
+	display: none;
+}
+
 
 .paper-box-block {
 
