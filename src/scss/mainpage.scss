@@ -3,12 +3,38 @@
 	position: relative;
 }
 .open-menu {
-	position: fixed;
-	top: 100px;
-	right: 15px;
-	z-index: 50;
-	height: 50px;
-	width: 50px;
+	display: none;
+	@media (max-width: 992px) {
+		display: block;
+		position: fixed;
+		top: 100px;
+		@include adaptiveValue("top", 100, 60, 992, 767, 1);
+		right: 15px;
+		z-index: 50;
+		height: 50px;
+		width: 50px;
+		svg:last-child{
+			display: none;
+		}
+	}
+	path {
+		fill: #0e7a73;
+		transition: all 0.3s ease 0s;
+	}
+	&:hover{
+		path {
+			fill: #0c6962;
+		}
+	}
+}
+
+.open-menu._active {
+	svg:last-child{
+		display: block;
+	}
+	svg:first-child{
+		display: none;
+	}
 }
 
 // main-screen  ====================================================================================================//
@@ -770,17 +796,23 @@
 
 
 .aside {
+	position: relative;
 	@media (max-width: 992px) {
 		position: absolute;
+		top: 0px;
 		right: -100%;
 		width: 100%;
 		background-color: #fff;
 		max-width: 400px;
 		padding-left: 20px;
+		padding-right: 15px;
+		padding-bottom: 30px;
 		z-index: 2;
 		transition: all 0.3s ease 0s;
 		&._active {
 			right: 0;
+			box-shadow: -2px 3px 17px 0 #000;
+			padding-top: 50px;
 		}
 	}
 	max-width: 350px;

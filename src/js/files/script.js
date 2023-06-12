@@ -36,9 +36,12 @@ $(document).ready(function () {
 
 let buttonAsideOpen = document.querySelector('.open-menu');
 let asideMenu = document.querySelector('.aside');
+//let buttonAsideClose = document.querySelector('.aside-menu-close')
 
 function activeAside() {
 	asideMenu.classList.toggle('_active')
+	buttonAsideOpen.classList.toggle('_active')
 }
 
 buttonAsideOpen.addEventListener('click', activeAside)
+//buttonAsideClose.addEventListener('click', activeAside)
