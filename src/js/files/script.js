@@ -67,3 +67,5 @@ toSecondPage.addEventListener('click', addClassSecond)
 toSecondSecondPage.addEventListener('click', addClassSecond)
 toFirstPage.addEventListener('click', removeClassSecond)
 */
+
+
