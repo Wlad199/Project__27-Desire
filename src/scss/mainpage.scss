@@ -819,9 +819,11 @@ body._disable {
 	}
 
 	&__box {
-		overflow: auto;
-		max-width: 400px;
-		max-height: 550px;
+		@media (max-width: 992px) {
+			overflow: auto;
+			max-width: 400px;
+			max-height: 550px;
+		}
 	}
 
 	&__form {
@@ -833,7 +835,7 @@ body._disable {
 		align-items: center;
 		padding: 6px 14px 6px 18px;
 		height: 40px;
-		width: 100%;
+		//width: 100%;
 		border-radius: 20px;
 	}
 
@@ -1287,6 +1289,9 @@ body._disable {
 		display: flex;
 		gap: 10px;
 		padding-bottom: 25px;
+		@media (max-width: 500px) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__input-text {
@@ -1298,6 +1303,9 @@ body._disable {
 		&::placeholder {
 			color: #a1a1a1;
 		}
+		@media (max-width: 500px) {
+			flex: 0 1 100%;
+		}
 	}
 
 	&__input-email {
@@ -1308,6 +1316,9 @@ body._disable {
 		padding: 0px 15px;
 		&::placeholder {
 			color: #a1a1a1;
+		}
+		@media (max-width: 500px) {
+			flex: 0 1 100%;
 		}
 	}
 
